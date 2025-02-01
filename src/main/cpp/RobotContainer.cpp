@@ -1,7 +1,12 @@
 #include "RobotContainer.h"
 
+#include "zmq/zmq.hpp"
+
 RobotContainer::RobotContainer() {
-	
+	// zmq::context_t context{1};
+	// zmq::socket_t sock{context, zmq::socket_type::sub};
+
+	std::cout << "zmq version: " << std::to_string(get<0>(zmq::version())) << "." << std::to_string(get<0>(zmq::version())) << "." << std::to_string(get<0>(zmq::version())) << "\n";
 }
 
 void RobotContainer::CheckDriverStationUpdate() {

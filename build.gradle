@@ -49,6 +49,16 @@ wpi.sim.addGui().defaultEnabled = true
 wpi.sim.addDriverstation()
 
 model {
+    repositories {
+		libs(PrebuiltLibraries) {
+            libzmq {
+                binaries.withType(SharedLibraryBinary) {
+                    sharedLibraryFile = file( projectDir.absolutePath + "/lib/libzmq.so")
+                }
+            }
+        }
+    }
+
     components {
         frcUserProgram(NativeExecutableSpec) {
             targetPlatform wpi.platforms.roborio
@@ -64,6 +74,8 @@ model {
                 exportedHeaders {
                     srcDir 'src/main/include'
                 }
+            
+                lib library: 'libzmq', linkage: 'shared'    
             }
 
             // Set deploy task to deploy this component
