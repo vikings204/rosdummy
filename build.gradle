@@ -53,7 +53,7 @@ model {
 		libs(PrebuiltLibraries) {
             libzmq {
                 binaries.withType(SharedLibraryBinary) {
-                    sharedLibraryFile = file("lib/libzmq.so")
+                    sharedLibraryFile = file(projectDir.absolutePath + "/lib/libzmq.so")
                 }
             }
         }
