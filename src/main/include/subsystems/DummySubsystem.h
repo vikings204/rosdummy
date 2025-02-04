@@ -15,5 +15,5 @@ public:
 
 private:
     rev::spark::SparkMax SparkMaxes[8]; // using vector resulted in "error: use of deleted function"
-    rev::servohub::ServoHub ServoHub;
+    //rev::servohub::ServoHub ServoHub;
 };

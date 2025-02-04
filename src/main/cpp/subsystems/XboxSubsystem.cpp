@@ -6,7 +6,7 @@ OPERATOR{Constants::XBOX_OPERATOR_ID},
 ctx{1},
 sock{ctx, zmq::socket_type::pub}
 {
-    sock.connect(Constants::JETSON_UDP_HOST + "02");
+    sock.connect(Constants::JETSON_CONN_PREFIX + "02");
     std::cout << "initialized xbox controllers\n";
 }
 

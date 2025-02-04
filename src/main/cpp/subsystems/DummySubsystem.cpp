@@ -11,8 +11,8 @@ SparkMaxes{
     rev::spark::SparkMax{22, rev::spark::SparkBase::MotorType::kBrushless},
     rev::spark::SparkMax{13, rev::spark::SparkBase::MotorType::kBrushless},
     rev::spark::SparkMax{23, rev::spark::SparkBase::MotorType::kBrushless},
-},
-ServoHub{8}
+}//,
+//ServoHub{8}
 {
     std::cout << "initialized spark maxes\n";
 }

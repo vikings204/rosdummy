@@ -4,7 +4,7 @@ RobotStateSubsystem::RobotStateSubsystem() :
 ctx{1},
 sock{ctx, zmq::socket_type::pub}
 {
-    sock.connect(Constants::JETSON_UDP_HOST + "01");
+    sock.connect(Constants::JETSON_CONN_PREFIX + "01");
     std::cout << "initialized robot state updater";
 }
 
@@ -52,5 +52,10 @@ void RobotStateSubsystem::Periodic() {
     }
 
     auto res = sock.send(zmq::buffer(msgpack::pack(state)), zmq::send_flags::none);
-    res.reset();
+    if (res.has_value()) {
+        std::cout << res.value();
+    } else {
+        std::cout << "failed to send robot state";
+    }
+    // res.reset();
 }

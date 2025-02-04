@@ -2,7 +2,10 @@
 
 #include "zmq/zmq.hpp"
 
-RobotContainer::RobotContainer() {
+RobotContainer::RobotContainer() :
+Dummy{},
+RobotState{}
+{
 	// zmq::context_t context{1};
 	// zmq::socket_t sock{context, zmq::socket_type::sub};
 
