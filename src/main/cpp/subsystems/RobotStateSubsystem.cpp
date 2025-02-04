@@ -5,7 +5,7 @@ ctx{1},
 sock{ctx, zmq::socket_type::pub}
 {
     sock.connect(Constants::JETSON_CONN_PREFIX + "01");
-    std::cout << "initialized robot state updater";
+    std::cout << "initialized robot state updater\n";
 }
 
 void RobotStateSubsystem::Periodic() {
