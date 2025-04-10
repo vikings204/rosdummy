@@ -14,6 +14,6 @@ public:
     void Periodic() override;
 
 private:
-    rev::spark::SparkMax SparkMaxes[8]; // using vector resulted in "error: use of deleted function"
+    rev::spark::SparkMax SparkMaxes[9]; // using vector resulted in "error: use of deleted function"
     //rev::servohub::ServoHub ServoHub;
 };

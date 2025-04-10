@@ -8,6 +8,7 @@
 
 #include "subsystems/DummySubsystem.h"
 #include "subsystems/RobotStateSubsystem.h"
+#include "subsystems/XboxSubsystem.h"
 
 class RobotContainer {
 public:
@@ -17,6 +18,7 @@ public:
 private:
 	DummySubsystem Dummy;
 	RobotStateSubsystem RobotState;
+	XboxSubsystem Xbox;
 
 	frc::DriverStation::Alliance alliance;
 	std::string allianceString = "never init";
